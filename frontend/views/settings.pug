@@ -1,0 +1,40 @@
+extends layout.pug
+
+block content
+  button.btn.log-out-btn.float-right.mr-4.mt-3(type='button', onclick="window.location.href='index'") Log out
+  a.float-left.ml-4.mt-3(href='dashboard') Back
+  .jumbotron.jumbotron-fluid.text-center.mb-0
+    .container
+      h1.display-4 Inspiration for interior design
+  .container.main-container
+    #settings-container.mx-auto
+      h3 User information
+      .pt-5
+        form#information-form
+          .form-group
+            label(for='change-first-name') First name
+            input#change-first-name.form-control(type='text', placeholder='Enter first name', autocomplete='nope')
+          .form-group
+            label(for='change-last-name') Last name
+            input#change-last-name.form-control(type='text', placeholder='Enter last name', autocomplete='nope')
+          .form-group
+            label(for='change-email') Email address
+            input#change-email.form-control(type='email', placeholder='Enter email', autocomplete='nope')
+          .form-group
+            label(for='change-username') Username
+            input#change-username.form-control(type='text', placeholder='Username', autocomplete='nope')
+          .form-group
+            label(for='change-password') Password
+            p.short-password Password is too short
+            p.check-password Check password!
+            input#change-password.form-control(type='password', aria-describedby='change-password-help', placeholder='Password')
+            small#change-password-help.form-text.text-muted
+              | Your password must be at least 10 characters long.
+          .form-group
+            label(for='confirm-new-password') Confirm Password
+            p.check-password Check password!
+            input#confirm-new-password.form-control(type='password', placeholder='Confirm password')
+            p.fillFields.text-center.pt-3.mb-0 All fields must be filled!
+        .row.justify-content-center.pt-3
+          button#update-btn.btn.mt-3(type='submit', value='submit-update-info') Update
+          script(src='/static/js/settings.js')

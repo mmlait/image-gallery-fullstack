@@ -1,0 +1,55 @@
+extends layout.pug
+
+block content
+  .jumbotron.jumbotron-fluid.text-center.mb-0
+    .container
+      h1.display-4 Inspiration for interior design
+      p.lead.mt-4.mb-0 Log in to see photos.
+  .container.main-container
+    #sign-in-container.mx-auto
+      ul.nav.nav-tabs
+        li#x.nav-item.focus-link
+          a#sign-in-link.nav-link.disabled.disabled-link(href='#sign-in') Sign in
+        li#y.nav-item.y
+          a#register-link.nav-link(href='#register') Register
+      #sign-in.pt-5
+        form
+          .form-group
+            label(for='username') Username
+            input#username.form-control(type='text', placeholder='Username', autocomplete='nope')
+          .form-group
+            label(for='password') Password
+            p#short Check password!
+            input#password.form-control(type='password', placeholder='Password')
+            p.fillFields.text-center.pt-3.mb-0 All fields must be filled!
+        .row.justify-content-center.pt-3
+          button#sign-in-btn.btn.mt-3(type='submit', value='submit-login-info') Log in
+      #register.pt-5
+        form#register-form
+          .form-group
+            label(for='first-name') First name
+            input#first-name.form-control(type='text', placeholder='Enter first name')
+          .form-group
+            label(for='last-name') Last name
+            input#last-name.form-control(type='text', placeholder='Enter last name', autocomplete='nope')
+          .form-group
+            label(for='set-email') Email address
+            p#email-check Email must be in the following format example@example.com
+            input#set-email.form-control(type='email', placeholder='Enter email', autocomplete='nope')
+          .form-group
+            label(for='set-username') Username
+            input#set-username.form-control(type='text', placeholder='Username', autocomplete='nope')
+          .form-group
+            label(for='set-password') Password
+            p.short-password Password is too short
+            p.check-password Check password!
+            input#set-password.form-control(type='password', aria-describedby='password-help', placeholder='Password')
+            small#password-help.form-text.text-muted
+              | Your password must be at least 10 characters long.
+          .form-group
+            label(for='confirm-password') Confirm Password
+            p.check-password Check password!
+            input#confirm-password.form-control(type='password', placeholder='Confirm password')
+            p.fillFields.text-center.pt-3.mb-0 All fields must be filled!
+        .row.justify-content-center.pt-3
+          button#register-btn.btn.mt-3(type='submit', value='submit-register-info') Register

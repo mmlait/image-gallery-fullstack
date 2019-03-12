@@ -1,0 +1,235 @@
+html,
+body {
+  background-color: #191D2C;
+  color: #E1E2E4;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.content {
+  min-height: 100%;
+  position: relative;
+}
+
+.jumbotron {
+  background-color: #3F434E;
+}
+
+.main-container {
+  padding-bottom: 80px;
+}
+
+#sign-in-container,
+#settings-container {
+  width: 30%;
+  margin: 7% 0 12%;
+  border-radius: 5px;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid white;
+}
+
+.focus-link {
+  border-bottom: 0.5px solid #191D2C;
+}
+
+a {
+  color: #E1E2E4;
+}
+
+a:hover {
+   text-decoration: none;
+ }
+
+#sign-in-link,
+#register-link {
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.disabled-link {
+  color: white !important;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: #E1E2E4;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  background-color: rgb(195, 198, 199);
+  color: #030818;
+  box-shadow: 2px 2px 20px #030818;
+  border: 2px solid #727682;
+  transform: scale(1.03);
+}
+
+#sign-in-btn,
+#register-btn,
+.swal-button,
+#update-btn {
+  background-color: #030818;
+  color: #E1E2E4;
+  width: 40%;
+}
+
+#sign-in-link:hover,
+#register-link:hover,
+#sign-in-btn:hover,
+#register-btn:hover,
+#update-btn:hover,
+.log-out-btn:hover,
+a:hover {
+  color: rgb(209, 150, 192);
+}
+
+#sign-in-btn:focus,
+#register-btn:focus,
+#update-btn:focus,
+.log-out-btn:focus {
+  box-shadow: none;
+}
+
+#register,
+#email-check,
+.short-password,
+.check-password,
+.fillFields,
+#short {
+  display: none;
+}
+
+#short,
+#email-check,
+.short-password,
+.check-password,
+.fillFields {
+  color: #79192b;
+  font-size: 0.7rem;
+}
+
+.modify{
+  border: 2px solid #79192b;
+}
+
+.swal-modal {
+  background: #E1E2E4;
+  color: #191D2C;
+}
+
+.swal-button {
+  font-size: 1rem;
+  padding: 10px 15px;
+  margin: 0 60px;
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: #191D2C;
+}
+
+#to-top {
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+}
+
+footer div {
+  font-size: 0.7rem;
+}
+
+/* ---dashboard--- */
+
+.log-out-btn {
+  background-color: #191D2C;
+  color: #E1E2E4;
+}
+
+#photo-nav ul {
+  background-color: #727682;
+}
+
+h2 {
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+#living-room {
+  padding-top: 3%;
+}
+
+.card {
+  border-color: #191D2C;
+  background-color: #191D2C;
+}
+
+img {
+  margin-bottom: 30px;
+  transition: 0.3s ease-in-out;
+  border-radius: 5px;
+  min-height: 150px;
+  min-width: 150px;
+  max-height: 180px;
+  max-width: 180px;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+
+/* ---media queries--- */
+
+@media(max-width: 995px) {
+
+  #sign-in-container,
+  #settings-container {
+    width: 45%;
+  }
+
+}
+
+@media(max-width: 576px) {
+
+  h1 {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .card {
+    max-width: 50%;
+  }
+
+  h2 {
+    padding-bottom: 5%;
+    text-align: center;
+  }
+
+  #sign-in-container,
+  #settings-container {
+    width: 100%;
+    margin: 12% 0 25%;
+  }
+
+  #living-room {
+    padding-top: 10%;
+  }
+
+  #to-top {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 7%;
+  }
+
+}

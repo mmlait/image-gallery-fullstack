@@ -1,0 +1,6 @@
+{
+  "BACKEND_LISTEN_PORT": "2000",
+  "FRONTEND_LISTEN_PORT": "2001",
+  "JWT_SECRET": "THIS IS A SECRET",
+  "MONGODB_URI": "mongodb://localhost/image-gallery-db"
+}

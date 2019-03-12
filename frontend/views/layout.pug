@@ -1,0 +1,18 @@
+doctype html
+html(lang='en', dir='ltr')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    title Image Gallery
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css', integrity='sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.css')
+    link(rel='stylesheet', href='/static/css/custom.css')
+    link(rel='shortcut icon', href='/static/images/favicon.ico', type='image/x-icon')
+    script(src='/static/resources/jquery-3.3.1.js')
+    script(src='/static/js/index.js')
+    script(src='/static/js/app.js')
+    script(src='https://unpkg.com/sweetalert/dist/sweetalert.min.js')
+  body
+    .content
+      block content
+      include includes/footer.pug

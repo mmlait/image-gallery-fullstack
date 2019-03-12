@@ -1,0 +1,100 @@
+extends layout.pug
+
+block content
+  button.btn.log-out-btn.float-right.mr-4.mt-3(type='button', onclick="window.location.href='index'") Log out
+  a#to-account.float-left.ml-4.mt-3(href='settings') Account
+  .jumbotron.jumbotron-fluid.text-center.mb-0
+    .container
+      h1.display-4 Inspiration for interior design
+  nav#photo-nav
+    ul.nav.nav-pills.nav-fill
+      li.nav-item
+        a.nav-link(href='#living-room') Living room
+      li.nav-item
+        a.nav-link(href='#kitchen') Kitchen
+      li.nav-item
+        a.nav-link(href='#bedroom') Bedroom
+      li.nav-item
+        a.nav-link(href='#bathroom') Bathroom
+  .container.main-container
+    .tz-gallery
+      h2#living-room Living room
+      .row
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+      h2#kitchen Kitchen
+      .row
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+      h2#bedroom Bedroom
+      .row
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+      h2#bathroom Bathroom
+      .row
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+        .col-md-3.col-sm-6
+          .card.mx-auto
+            a.lightbox(href='/static/images/plant.png')
+              img.card-img-top(src='/static/images/plant.png', alt='placeholder')
+      #to-top
+        a.pt-2.pb-2(href='#') Back to top
+  //- popper, Bootstrap js, baguetteBox js
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js', integrity='sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut', crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js', integrity='sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k', crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js')
+  script.
+    baguetteBox.run('.tz-gallery');
