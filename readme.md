@@ -15,6 +15,7 @@ The front is a Bootstrap and jQuery project. Users can browse images after signi
                               Documentation
                           _______________________
 
+This project requires MongoDB to be installed on the server.
 The backend server is set to listen to port 2000 by default. The config.json file
 in the root folder of the project may be used to alter this and the database URI.
 The documentation includes the paths exposed by the backend for managing users
