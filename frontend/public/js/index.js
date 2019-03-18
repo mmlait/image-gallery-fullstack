@@ -1,3 +1,13 @@
+function cookieAlert(){
+  setTimeout(function(){
+    swal({
+      title: 'This website uses cookies.',
+      text: 'By continuing to use this website you accept the use of cookies.',
+      button: 'Ok'
+    })
+  }, 1500);
+};
+
 $(document).ready(function(){
   // show sign in form
   $("#sign-in-link").click(function(){
