@@ -175,7 +175,7 @@ const remove = async (currentUser, id) => {
   console.log('Received API call: users/remove');
   try {
     // verify current user has admin rights if removing data of other users
-    if (currentUser.admin) {
+    if (currentUser.admin || currentUser.sub == id) {
       const user = await User.findById(id);
       if (user.isAdmin) {
         // verify there is at least one admin in database all the time

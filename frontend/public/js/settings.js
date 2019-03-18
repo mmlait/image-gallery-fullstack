@@ -120,7 +120,6 @@ $(document).ready(function() {
                   console.log('Something went wrong. ' + errorMessage);
               },
               success: function(data) {
-                console.log(data);
                 $("#change-first-name").val(data.firstName);
                 $("#change-last-name").val(data.lastName);
                 $("#change-email").val(data.email);
@@ -144,6 +143,58 @@ $(document).ready(function() {
            })
         }
       });
+  }
+
+  // delete current user
+  const deleteBtn = document.getElementById('delete-btn');
+  if(deleteBtn){
+    deleteBtn.addEventListener('click',
+    function remove(){
+      swal({
+        title: "Are you sure?",
+        icon: "warning",
+        buttons: {
+          cancel: 'Cancel',
+          confirm: 'Yes'
+        }
+      }).then(function(isConfirm) {
+        if (isConfirm) {
+          let strArr = document.cookie.split("=");
+          let token = strArr[1];
+          $.ajax({
+              method: 'DELETE',
+              headers: {
+                'Authorization':'Bearer ' + token,
+                'Content-Type':'application/json'
+              },
+              accepts: {
+                contentType: 'application/json'
+              },
+              contentType: 'application/json',
+              url: 'http://localhost:2000/api/users/remove?id=' + currentId,
+              processData: false,
+              error: function(jqXHR, textStatus, errorMessage) {
+                  console.log('Something went wrong. ' + errorMessage);
+              },
+              success: function(data) {
+                if (data.hasOwnProperty('message')) {
+                  swal({
+                    title: data.message,
+                    button: 'Ok'
+                  })
+                } else {
+                  swal({
+                    title: 'Your information has been deleted.',
+                    button: 'Ok'
+                  }).then(function() {
+                      window.location = '/index';
+                  });
+                }
+              }
+          });
+        }
+      })
+    });
   }
 
 })

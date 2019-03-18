@@ -8,7 +8,6 @@ const router = express.Router();
 
 // register new user
 const register = (req, res, next) => {
-  console.log(req.body);
   userService.create(req.body)
     .then((success) => {
       if (success) {

@@ -73,7 +73,8 @@ input[type="password"]:focus {
 #sign-in-btn,
 #register-btn,
 .swal-button,
-#update-btn {
+#update-btn,
+#delete-btn {
   background-color: #030818;
   color: #E1E2E4;
   width: 40%;
@@ -84,6 +85,7 @@ input[type="password"]:focus {
 #sign-in-btn:hover,
 #register-btn:hover,
 #update-btn:hover,
+#delete-btn:hover,
 .log-out-btn:hover,
 a:hover {
   color: rgb(209, 150, 192);
@@ -92,6 +94,7 @@ a:hover {
 #sign-in-btn:focus,
 #register-btn:focus,
 #update-btn:focus,
+#delete-btn:focus,
 .log-out-btn:focus {
   box-shadow: none;
 }
@@ -123,10 +126,22 @@ a:hover {
   color: #191D2C;
 }
 
+.swal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.swal-button-container {
+  width: 25%;
+}
+
 .swal-button {
   font-size: 1rem;
-  padding: 10px 15px;
-  margin: 0 60px;
+  width: 100%;
+}
+
+.swal-button--cancel {
+  background-color: #581021;
 }
 
 .swal-button:not([disabled]):hover {
