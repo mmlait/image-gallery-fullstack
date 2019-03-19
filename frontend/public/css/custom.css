@@ -70,6 +70,12 @@ input[type="password"]:focus {
   transform: scale(1.03);
 }
 
+.notification {
+  background-color: #3F434E;
+  padding: 5%;
+  border: 1.5px solid #79192b;
+}
+
 #sign-in-btn,
 #register-btn,
 .swal-button,

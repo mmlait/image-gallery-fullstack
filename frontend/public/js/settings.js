@@ -118,6 +118,10 @@ $(document).ready(function() {
               processData: false,
               error: function(jqXHR, textStatus, errorMessage) {
                   console.log('Something went wrong. ' + errorMessage);
+                  swal({
+                    title: 'Something went wrong.',
+                    button: 'Ok'
+                  })
               },
               success: function(data) {
                 $("#change-first-name").val(data.firstName);
@@ -175,6 +179,10 @@ $(document).ready(function() {
               processData: false,
               error: function(jqXHR, textStatus, errorMessage) {
                   console.log('Something went wrong. ' + errorMessage);
+                  swal({
+                    title: 'Something went wrong.',
+                    button: 'Ok'
+                  })
               },
               success: function(data) {
                 if (data.hasOwnProperty('message')) {
