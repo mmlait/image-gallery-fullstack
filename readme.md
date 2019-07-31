@@ -1,19 +1,20 @@
 
 
-                              Image Gallery
-                          _______________________
-
+#                              Image Gallery
+<pre>
 
 The backend is built using express. It provides JWT authentication and user management
 as well as connection to the MongoDB database through the use of the mongoose library.
 
 The front is a Bootstrap and jQuery project. Users can browse images after signing in.
 
+<img src="image-gallery.gif" width="400"/>
 
+<img src="image-gallery2.gif" width="400"/>
 
-
-                              Documentation
-                          _______________________
+</pre>
+ ##                             Documentation
+<pre>
 
 This project requires MongoDB to be installed on the server.
 The backend server is set to listen to port 2000 by default. The config.json file
@@ -39,9 +40,9 @@ PUT      /api/users/update               |   update details of a single user
 DELETE   /api/users/remove               |   remove a single user
 
 
-
-REGISTRATION EXAMPLE REQUEST
--------------------------------------
+</pre>
+### Registration example request
+<pre>
 
 POST  localhost:2000/api/users/register
 
@@ -49,7 +50,6 @@ HEADER:
 Content-type: application/json
 
 BODY:
-
 {
   "username": "Anna123",
   "password": "top-Secret",
@@ -59,23 +59,17 @@ BODY:
 }
 
 
+</pre>
+### Mongoose schema
+<pre>
 
-MONGOOSE SCHEMA
--------------------------------------
 const schema = new Schema({
-
   username: { type: String, unique: true, required: true },
-
   hash: { type: String, required: true },
-
   firstName: { type: String, required: true },
-
   lastName: { type: String, required: true },
-
   createdDate: { type: Date, default: Date.now },
-
   email: { type: String, required: true },
-
   isAdmin: { type: String, required: true, default: false },
-
 });
+</pre>
