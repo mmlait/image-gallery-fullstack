@@ -8,9 +8,15 @@ as well as connection to the MongoDB database through the use of the mongoose li
 
 The front is a Bootstrap and jQuery project. Users can browse images after signing in.
 
-<img src="image-gallery.gif" width="400"/>
 
-<img src="image-gallery2.gif" width="400"/>
+
+<img src="image-gallery.gif" width="600"/>
+
+
+
+<img src="image-gallery2.gif" width="600"/>
+
+
 
 </pre>
  ##                             Documentation
@@ -55,7 +61,7 @@ BODY:
   "password": "top-Secret",
   "firstName": "Anna",
   "lastName": "Andersson",
-  "email": "anna@anna.com"
+  "email": "anna@example.com"
 }
 
 
